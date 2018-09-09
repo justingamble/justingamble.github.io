@@ -1,1 +1,4 @@
-theme: jekyll-theme-cayman
+theme:
+title: get |> loaded
+description: Tapping into the Elixir mindset
+#theme: jekyll-theme-cayman
