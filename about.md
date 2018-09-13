@@ -23,7 +23,9 @@ Fascinated and intrigued I decided to read Dave Thomas's
 books at the time, and started reading select blogs on the [Elixir Radar](http://plataformatec.com.br/elixir-radar/weekly-newsletter) newsletter.
 Now I am intrigued by all things Elixir.
 
+## What did you use before Elixir?
 
+Before discovering Elixir I used C, C++, Smalltalk, Java, Perl, Python, and Ruby.  I still enjoy these languages.
 
 ## What else do you like to do for fun?
 
