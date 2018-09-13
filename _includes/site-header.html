@@ -23,9 +23,8 @@
 
         <div class="trigger">
           {% for path in page_paths %}
-            <!-- only show items in the menu header if they are tagged... menu = main -->
-
             {% assign my_page = site.pages | where: "path", path | first %}
+              <!-- only show items in the menu header if the frontmatter contains... menu: main -->
               {% if my_page.menu == 'main' %}
                 {% if my_page.title %}
                 {% if my_page.title contains "404" %}
