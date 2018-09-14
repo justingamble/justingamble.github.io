@@ -10,7 +10,7 @@ permalink: /about/
 ## Why make a blog?
 
 This blog is meant to help me explore Elixir features, and hopefully help others explore Elixir as well.
-If you have feedback, please send me a note.
+If you have feedback, please message me.
 
 ## Why Elixir?  
 
