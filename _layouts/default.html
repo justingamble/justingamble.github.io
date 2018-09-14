@@ -83,7 +83,9 @@
 
       {{ content }}
 
-      {% include about-me-footer.html %}
+      {% if page.title == 'About' %}
+          {% include about-me-footer.html %}
+      {% endif %}
     </section>
 
     {% if site.google_analytics %}
