@@ -24,10 +24,13 @@
         <div class="trigger">
           {% for path in page_paths %}
             {% assign my_page = site.pages | where: "path", path | first %}
-            {% if my_page.title %}
-              {% if my_page.title contains "404" %}
-              {% else %}
-                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              <!-- only show items in the menu header if the frontmatter contains... menu: main -->
+              {% if my_page.menu == 'main' %}
+                {% if my_page.title %}
+                {% if my_page.title contains "404" %}
+                {% else %}
+                  <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                {% endif %}
               {% endif %}
             {% endif %}
           {% endfor %}
@@ -35,4 +38,7 @@
       </nav>
     {% endif %}
   </div>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </header>
