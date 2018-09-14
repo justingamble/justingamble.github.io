@@ -1,4 +1,8 @@
 theme:
-title: get |> loaded
+title: Justin Gamble
+first_name: Justin
 description: Tapping into the Elixir mindset
+linkedin_username: justin-gamble-6762391
+twitter:
+  username: JustinGamble50
 #theme: jekyll-theme-cayman
