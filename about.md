@@ -5,7 +5,7 @@ menu: main
 permalink: /about/
 ---
 
-![selfie](/assets/github.selfie.jpg){:class="selfie"}
+![selfie](/assets/images/github.selfie.jpg){:class="selfie"}
 
 ## Why make a blog?
 
@@ -32,6 +32,6 @@ Before discovering Elixir I used C, C++, Smalltalk, Java, Perl, Python, and Ruby
 
 ## What else do you like to do for fun?
 
-I enjoy bicycling, playing chess, and dying alot in [Star Wars Battlefront](http://starwars.ea.com/starwars/battlefront).
+I enjoy bicycling, swimming, playing chess, and dying alot in [Star Wars Battlefront](http://starwars.ea.com/starwars/battlefront).
 
 [Go to the Home Page](/)
