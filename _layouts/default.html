@@ -88,6 +88,9 @@
           {% if page_author %}
             • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page_author }}</span></span>
           {% endif %}
+          {% if page.read-minutes %}
+            • <span itemprop="read-minutes" itemscope>{{ page.read-minutes }} min read</span>
+          {% endif %}
           </h2>
         {% endif %}
         <!-- End: Post tagline -->

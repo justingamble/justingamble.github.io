@@ -15,8 +15,11 @@ layout: default
       <li>
 
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+        {% assign estimated_time = post.read-minutes | default: nil %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-
+        {% if estimated_time %}
+          • <span class="post-meta">{{ estimated_time }} min read</span>
+        {% endif %}
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
