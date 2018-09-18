@@ -1,8 +1,19 @@
-theme:
 title: Justin Gamble
-first_name: Justin
 description: Tapping into the Elixir mindset
-linkedin_username: justin-gamble-6762391
+
+url: "https://justingamble.github.io"
+
+# caymon-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+cayman-blog:
+    date_format: "%b %-d, %Y"
+
+theme:   # leave it empty
+
+first_name: Justin
+
+linkedin:
+  username: justin-gamble-6762391
+  
 twitter:
   username: JustinGamble50
-#theme: jekyll-theme-cayman

@@ -2,7 +2,7 @@
 layout: page
 title: About
 menu: main
-permalink: /about/
+permalink: /about.html
 ---
 
 ![selfie](/assets/images/github.selfie.jpg){:class="selfie"}
@@ -34,4 +34,4 @@ Before discovering Elixir I used C, C++, Smalltalk, Java, Perl, Python, and Ruby
 
 I enjoy bicycling, swimming, playing chess, and dying alot in [Star Wars Battlefront](http://starwars.ea.com/starwars/battlefront){:target="_blank"}.
 
-[Go to the Home Page](/)
+[Go to the Home Page]({{ site.url }}{{ site.baseurl }})
