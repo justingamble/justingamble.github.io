@@ -98,6 +98,10 @@
 
     <section class="main-content">
 
+      {% if page.photo %}
+        <img src="/assets/images/{{ page.photo }}" class="post-photo">
+      {% endif %}
+
       {{ content }}
 
       {% if page.title == 'About' %}

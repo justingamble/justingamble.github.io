@@ -4,6 +4,7 @@ title:  "Hello World"
 date:   2018-09-07 17:08:01 -0600
 read-minutes: 10
 categories: jekyll learning
+#photo: BookPile.jpg
 ---
 This is a sample post.
 
