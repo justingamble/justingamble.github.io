@@ -1,0 +1,16 @@
+
+// elixir-pic: the picture of books/chemistry in the main header
+.elixir-pic {
+    width: 25%;
+    height: 20%;
+    max-width: 375px;
+    max-height: 300px;
+    min-width: 250px;
+    min-height: 200px;
+}
+
+// post-photo: optional photo to include at the top of a given post
+.post-photo {
+    width: 100%;
+    height: auto;
+}
