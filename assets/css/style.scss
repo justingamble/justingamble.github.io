@@ -24,6 +24,18 @@
     border-color: red;  */
 }
 
+.contact-me-form-div {
+    margin: auto;
+    width: 100%;
+    border: 3px solid green; 
+    text-align: center;
+}
+
+.contact-me-form-iframe {
+/*    margin: auto; */
+/*    display: block; */
+}
+
 @media only screen and (min-width: 585px) {
     .why-elixir-paragraph {
         margin-left: 37%;
