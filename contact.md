@@ -3,6 +3,7 @@ layout: page
 title: Contact
 menu: main
 tagline: Create a contact form and you are good to go
+permalink: /contact.html
 ---
 
 <div class="iframe-container google-contact-form-height">
