@@ -24,16 +24,38 @@
     border-color: red;  */
 }
 
-.contact-me-form-div {
+.iframe-container {
+//    border: 3px solid green;
+    border: 0;
     margin: auto;
-    width: 100%;
-    border: 3px solid green; 
+    padding: 0;
+    overflow: hidden;
+
+    position: relative;
     text-align: center;
+    width: 100%;
+    height: 100%;
+
+//    padding-top: 77.95%;
+//    padding-top: 90.65%;
+//    padding-top: 100%;
 }
 
-.contact-me-form-iframe {
-/*    margin: auto; */
-/*    display: block; */
+.google-contact-form-height {
+    height: 706px;
+}
+
+.iframe-container iframe {
+    border: none;
+    margin: 0;
+    overflow: hidden;
+
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (min-width: 585px) {
