@@ -7,6 +7,11 @@ permalink: /about.html
 
 ![selfie](/assets/images/github.selfie.jpg){:class="selfie"}
 
+## About Justin
+
+Hi, my name is Justin.  I'm a software developer based in Edmonton, Canada. I enjoy reading, writing, 
+and collaborating on code.
+
 ## Why make a blog?
 
 This blog is meant to help me explore Elixir features, and hopefully help others explore Elixir as well.
