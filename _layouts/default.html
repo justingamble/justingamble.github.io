@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#157878">
 
     {% if page.title %}
-      {% assign page-title = page.title | escape %}
+      {% assign page-title = page.title | append: ' | ' | append: site.title | escape %}
     {% else %}
       {% assign page-title = site.title | escape %}
     {% endif %}
@@ -61,7 +61,7 @@
         <img src="/assets/images/ElixirBook-med-transparent.png" class="elixir-pic">
         <h2 class="project-tagline">{{ page-tagline }}</h2>
       {% else %}
-        <h1 class="project-name">{{ page-title }}</h1>
+        <h1 class="project-name">{{ page.title }}</h1>
       {% endif %}
 
       {% comment %}
