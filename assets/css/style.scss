@@ -42,7 +42,9 @@
 }
 
 .google-contact-form-height {
-    height: 753px; // 706px=default height, 47px= max error messages height
+    height: 1023px; // 706px=default, plus extra for max error messages height
+            // 823px seems to cover the above.
+            // Adding even more to allow for multiple sentences in the message
 }
 
 .iframe-container iframe {
