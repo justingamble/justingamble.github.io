@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 menu: main
-tagline: Create a contact form and you are good to go
+tagline: Fill in form fields and press submit
 permalink: /contact.html
 ---
 
