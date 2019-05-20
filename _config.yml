@@ -8,12 +8,20 @@ url: "https://justingamble.github.io"
 cayman-blog:
     date_format: "%b %-d, %Y"
 
+port: 4444
+
 theme:   # leave it empty
 
 first_name: Justin
 
 linkedin:
   username: justin-gamble-6762391
-  
+
 twitter:
   username: JustinGamble50
+
+defaults:
+    - scope:
+          path: "assets/images"
+      values:
+          image: true

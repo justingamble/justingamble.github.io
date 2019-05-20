@@ -70,3 +70,33 @@
         border-color: blue;  */
     }
 }
+
+/**
+ * Images
+ */
+.dilbert-image {
+  width: 100%
+}
+
+/**
+ * Alignment
+ */
+.center-me {
+  margin: auto;
+  align: center;
+  width: 50%;
+  min-width: 320px;
+}
+/*body {
+  background-color: blue;
+}  */
+
+@media only screen and (max-width: 585px) {
+  .center-me {
+    align: left;
+    margin-left: 0px;
+  }
+/*  body {
+    background-color: olive;
+  } */
+}
