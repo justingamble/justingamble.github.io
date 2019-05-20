@@ -10,7 +10,8 @@ excerpt_separator: <!--more-->
 
 <div class="paragraph"><p> </p></div>
 I started an Elixir study group at my work.  For Elixir evangelists
-out there, I'm describing the approach we are using.
+out there, I describe the approach we are using.  I also review the
+content selected for the first session.
 <!--more-->
 
 ## The Study Group: Building a foundation
