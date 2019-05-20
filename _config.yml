@@ -25,3 +25,6 @@ defaults:
           path: "assets/images"
       values:
           image: true
+          
+google_analytics:
+  id: UA-130688213-1
