@@ -110,7 +110,9 @@
     <section class="main-content">
 
       {% if page.photo %}
-        <img src="/assets/images/{{ page.photo }}" class="post-photo">
+        <div class="post-photo">
+          <img src="/assets/images/{{ page.photo }}" class="post-photo-img">
+        </div>
       {% endif %}
 
       {{ content }}

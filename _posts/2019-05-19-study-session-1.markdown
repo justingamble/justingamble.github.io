@@ -148,7 +148,7 @@ I found this awesome exercise on the first-rate [Exercism website](https://exerc
 ## Learnings
 
 After Session 1 with the group, the part that really connected with the audience
-was the examples.  For the next session I plan to put more focus on examples.  
+was the examples.  For the [next session]({% post_url 2019-06-02-study-session-2 %}) I plan to put more focus on examples.  
 
 I've also gained a strong appreciation for the [Exercism website](https://exercism.io/tracks/elixir) - it
 is not easy coming up with example problems.  I also love that after solving a puzzle you can view
