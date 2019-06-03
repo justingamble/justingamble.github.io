@@ -28,14 +28,14 @@ relevant pattern matching chapters of
 
 I reviewed a number of online exercises, but I found them to be too simple.  I wanted a realistic program with extensive use of pattern matching.  I decided to create my own.
 
-The exercise program maintains a list of employee structs.  Originally the records are read from a CSV file, but then there is an interactive menu that allows records to be added, deleted, or changed.  The program is longer than I initially intended, but it offers several examples of pattern matching.  
+The exercise program maintains a list of employee records.  Originally the employee records are read from a CSV file, but then there is an interactive menu that allows records to be added, deleted, or changed.  
 
 * [Exercise description & source code](https://bitbucket.org/siberianTiger/elixir-sessions/src/master/exercises/employee-info/)
 * A solution (forthcoming.. stay tuned)
 
 ### Pattern Matching examples
 
-These examples have been extracted from the [exercise](https://bitbucket.org/siberianTiger/elixir-sessions/src/master/exercises/employee-info/).
+These examples have been extracted from the [above exercise](https://bitbucket.org/siberianTiger/elixir-sessions/src/master/exercises/employee-info/).
 
 First, pattern matching is used to parse the input file into an Employee structure:
 
