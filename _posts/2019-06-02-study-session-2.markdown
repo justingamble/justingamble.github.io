@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Study session 2: Pattern Matching"
-date:   2019-06-02 18:00:00 -0600
-read-minutes: 7
+title:  "EmployeeInfo Exercise: Pattern Matching in the wild"
+date:   2019-06-13 09:00:00 -0600
+read-minutes: 10
 categories: elixir study learning evangelize pattern-matching
 photo: 2019.may/session2/SpeedLimit_45_s.jpg
 excerpt_separator: <!--more-->
@@ -15,23 +15,34 @@ A custom exercise that emphasizes Pattern Matching with Elixir.
 ## Context
 
 I am presenting Elixir to the software developers at my company during lunch hours.
-This is the material from session 2.  For session 1, please refer to [this post]({% post_url 2019-05-19-study-session-1 %}).
+This is the exercise for session 2.  For session 1, please refer to [this post]({% post_url 2019-05-19-study-session-1 %}).
 
-## Presentation Material
-
-For the presentation material, I collected and presented a number of examples from the
-relevant pattern matching chapters of
-* ["Learn Functional Programming with Elixir"](https://www.amazon.ca/Learn-Functional-Programming-Elixir-Foundations/dp/168050245X/ref=sr_1_fkmrnull_1?keywords=learn+functional+programming+with+elixir&qid=1558307840&s=gateway&sr=8-1-fkmrnull), and
-* ["Elixir In Action (2nd ed)"](https://www.amazon.ca/Elixir-Action-Sa%C5%A1a-Juri-cacute/dp/1617295027/ref=sr_1_1?keywords=elixir+in+action&qid=1558322196&s=gateway&sr=8-1)
+Session 2 was focused on Pattern Matching principles, as covered by chapter 3 of ["Learn Functional Programming with Elixir"](https://www.amazon.ca/Learn-Functional-Programming-Elixir-Foundations/dp/168050245X/ref=sr_1_fkmrnull_1?keywords=learn+functional+programming+with+elixir&qid=1558307840&s=gateway&sr=8-1-fkmrnull).
 
 ## Exercise: Employee Info
 
-I reviewed a number of online exercises, but I found them to be too simple.  I wanted a realistic program with extensive use of pattern matching.  I decided to create my own.
+My goal was show a realistic program with extensive use of pattern matching.  I decided to create a custom implementation.
 
-The exercise program maintains a list of employee records.  Originally the employee records are read from a CSV file, but then there is an interactive menu that allows records to be added, deleted, or changed.  
+The program maintains a list of employee records.  Originally the employee records are read from a CSV file, but then there is an interactive menu that allows records to be added, deleted, or changed.  
 
-* [Exercise description & source code](https://bitbucket.org/siberianTiger/elixir-sessions/src/master/exercises/employee-info/)
-* A solution (forthcoming.. stay tuned)
+* [Exercise description & source code](https://bitbucket.org/siberianTiger/elixir-sessions/src/master/exercises/employee-info/)  
+The assignment is to understand the existing program, and then extend it by filling out the contents of these two functions:
+{% highlight elixir  %}
+def change_salary(employee_data, employee, new_salary) when is_integer(new_salary) do
+  ## ************************************************************************
+  ## TODO: insert code here, return an updated list of employee_data structs.
+  ## The employee's ID should not change.
+  ## ************************************************************************
+end
+
+def change_first_name(employee_data, employee, new_name) when is_binary(new_name) do
+  ## ************************************************************************
+  ## TODO: insert code here, return an updated list of employee_data structs.
+  ## The employee's ID should not change.
+  ## ************************************************************************
+end
+{% endhighlight %}
+* [A solution](https://bitbucket.org/siberianTiger/elixir-sessions/src/master/solutions/employee-info/)
 
 ### Pattern Matching examples
 
@@ -54,16 +65,40 @@ def deconstruct_line(csv_line) do
 end
 {% endhighlight %}
 
-Second, pattern matching is used to determine which `get_unique_id` function is called:
+Second, pattern matching is used to determine which `get_unique_id/1` function is called:
 
 {% highlight elixir  %}
-def get_unique_id([]) do
-  1
-end
-
+def get_unique_id([]), do: 1
 def get_unique_id(employee_data) do
   %Employee{id: max_id} = Enum.max_by(employee_data, fn %Employee{id: id} -> id end)
   max_id + 1
+end
+{% endhighlight %}
+
+Third, before saving the new employee data to disk, the employee structs are sorted by ID.
+
+Guards are used to determine which `sort_employee_data/1` function is called.  
+If the list only contains one record, then the `length(employee_data) >= 2` check
+will fail, and the second implementation will execute and return the list unchanged.
+
+What makes this example interesting from a pattern matching perspective
+is that the `compare_ids/2` function only needs to extract the `id` from each
+structure.  The entire structure gets sorted, but the rest of the fields
+are not needed in the `compare_ids/2` function logic.
+
+{% highlight elixir  %}
+def sort_employee_data(employee_data) when is_list(employee_data)
+                                       and length(employee_data) >= 2 do
+  employee_data
+  |> Enum.sort(fn x, y -> compare_ids(x, y) end)
+end
+
+def sort_employee_data(employee_data) when is_list(employee_data) do
+  employee_data
+end
+
+def compare_ids(%Employee{id: id1}, %Employee{id: id2}) do
+  id1 < id2
 end
 {% endhighlight %}
 
@@ -76,6 +111,28 @@ def get_employee_record(employee_data, id) when is_integer(id) do
     match?(%Employee{id: ^id}, element)
   end)
 end
+{% endhighlight %}
+
+### Spotlight on the Pipeline Operator
+
+The unit tests include the below snippets.  When writing this code
+I was pleased with how clear the logic was, thanks to the
+expressiveness of the pipeline operator.
+
+To setup an initial list of employee structs:
+{% highlight elixir  %}
+  initial_data =
+    []
+    |> EmployeeInfo.add_employee(jane.first_name, jane.last_name, jane.salary)
+    |> EmployeeInfo.add_employee(john.first_name, john.last_name, john.salary)
+{% endhighlight %}
+
+Later, when we change the data as part of a test:
+{% highlight elixir  %}
+  changed_data =
+      initial_data
+      |> EmployeeInfo.change_salary(jane.id, 200000)
+      |> EmployeeInfo.change_salary(john.id, 300000)
 {% endhighlight %}
 
 ## Next session
