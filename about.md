@@ -21,13 +21,10 @@ If you have feedback, please message me.
 
 1. Elixir is built on BEAM.  For why that is important, check out the youtube video [The Soul of Erlang and Elixir, by Saša Jurić](https://www.youtube.com/watch?v=JvBT4XBdoUE).
 2. Elixir is fun; it implements modern ideas in a fresh way.  
-3. Pattern matching and de-structuring is easy to get used to, and hard to live without once you are used to it.
-4. Elixir is a stable, robust language.
-5. I appreciate the leadership of [José Valim](http://github.com/josevalim){:target="_blank"} and the Elixir community.  Ecto and Phoenix are brilliantly designed.  mix and hex.pm 
-are great tools.  The 3rd party packages that I have needed are available and stable.
-6. I love that the language is small and consistent.  There are not a ton of syntax
-details to remember.  
-7. Excellent reference documentation, and excellent book authors as well.
+3. Elixir is a stable, robust language.
+4. I appreciate the leadership of [José Valim](http://github.com/josevalim){:target="_blank"} and the Elixir community.  [Ecto](https://www.amazon.ca/Programming-Ecto-Database-Scalability-Performance/dp/1680502824/ref=sr_1_3?keywords=ecto+book&qid=1582015230&s=books&sr=1-3) and [Phoenix](https://www.amazon.ca/Phoenix-Action-Geoffrey-Lessel/dp/1617295043/ref=pd_sbs_14_2/136-3491359-4597008?_encoding=UTF8&pd_rd_i=1617295043&pd_rd_r=6b9775db-c084-42e9-8d5f-30659e7086b7&pd_rd_w=zymIB&pd_rd_wg=N4PZC&pf_rd_p=74b54c94-7195-4620-ba51-7d167ac58a58&pf_rd_r=A8NCQEYHW6XDCDR2TCVN&psc=1&refRID=A8NCQEYHW6XDCDR2TCVN) are brilliantly designed.  mix and hex.pm
+are examples of great tooling.  Broadway and [Absinthe](https://www.amazon.ca/Craft-GraphQL-APIs-Elixir-Absinthe/dp/1680502557/ref=sr_1_2?keywords=Absinthe+elixir&qid=1582015306&s=books&sr=1-2) are cutting edge.
+5. Excellent reference documentation, and excellent book authors as well.
 {: class="why-elixir-paragraph"}
 
 ## How did you discover Elixir?
